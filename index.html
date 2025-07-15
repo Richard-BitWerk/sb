@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>味纯园 · 手工拉面</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fdfdfd; color: #333; }
+    header { background-color: #fff; border-bottom: 1px solid #ccc; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    header img { height: 60px; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold; }
+    .reserve-btn { background-color: #b11d1d; color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+    .hero { padding: 3rem 2rem; background-image: url('Weixin%20Image_20250711170905.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 1px 1px 2px #000; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .story, .gallery, .menu-section, .reservation-section { padding: 2rem; max-width: 1000px; margin: auto; }
+    .story h2, .gallery h2, .menu-section h2, .reservation-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .gallery img { max-width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; }
+    .menu-section a { display: inline-block; padding: 0.5rem 1rem; background-color: #b11d1d; color: white; text-decoration: none; border-radius: 6px; }
+    .reservation-section form { display: flex; flex-direction: column; gap: 0.5rem; }
+    .reservation-section input, .reservation-section textarea { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+    .fixed-reserve { position: fixed; right: 1rem; bottom: 1rem; background-color: #b11d1d; color: white; padding: 1rem; border-radius: 50px; font-weight: bold; cursor: pointer; z-index: 1000; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo1.jpg" alt="味纯园 logo">
+    <nav>
+      <a href="#story">品牌故事</a>
+      <a href="#gallery">菜品欣赏</a>
+      <a href="#menu">菜单</a>
+      <a href="#reservation">预订</a>
+      <button class="reserve-btn" onclick="document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' });">立即预订</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>中国手工拉面 · 味纯园</h1>
+    <p>传承千年 · 一碗面的人文哲学</p>
+  </section>
+
+  <section id="story" class="story">
+    <h2>一碗面的文化哲学</h2>
+    <p>兰州牛肉面是丝路文明的结晶：西亚小麦、西域香料、中原烹饪技艺在黄河畔融合，体现了“和而不同”的东方智慧。</p>
+    <p>其发展史更是一部民生史诗——40万从业者依托“一碗面”脱贫致富，从沿街叫卖到百亿产业，印证了“小吃撬动大民生”的中国故事。</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>菜品欣赏</h2>
+    <img src="Weixin Image_202507111709051.jpg" alt="拉面">
+    <img src="10651032_silk bowls_Food_lanchou_lamian.jpg" alt="兰州拉面">
+    <img src="10651032_silk bowls_Food_edamame.jpg" alt="毛豆小菜">
+    <img src="Weixin Image_20250711170827.jpg" alt="拉面特写">
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2>菜单下载</h2>
+    <a href="c7.pdf" target="_blank">查看 PDF 菜单</a>
+  </section>
+
+  <section id="reservation" class="reservation-section">
+    <h2>立即预订</h2>
+    <form action="mailto:jc2062494@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="姓名" placeholder="姓名" required>
+      <input type="date" name="日期" required>
+      <input type="time" name="时间" required>
+      <input type="number" name="人数" placeholder="人数" required>
+      <input type="tel" name="联系方式" placeholder="联系方式" required>
+      <textarea name="留言" placeholder="备注信息" rows="4"></textarea>
+      <button type="submit" class="reserve-btn">提交预订</button>
+    </form>
+  </section>
+
+  <div class="fixed-reserve" onclick="document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' });">
+    立即预订
+  </div>
+</body>
+</html>
